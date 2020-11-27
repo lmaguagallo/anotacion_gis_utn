@@ -162,6 +162,25 @@ Los SCG incluyen:
 + El Meridiano principal (prime meridián)
 + Datum (basado en un esferoide)
 
+## Datum 
+El **Datum** sirve para hacer que un Sistema de Coordenadas Geográficas represente fielmente la superficie de la Tierra y salve las irregularidades de la misma, ya que esta no es esférica.
+
+*Aunque existe un Datum global, cada continente o país ha definido su propio Datum para adaptar mejor el Sistema de Coordenadas Geográficas a su superficie.*
+
+Técnicamente, el Datum es:
+1. Un conjunto de puntos de referencia en la superficie terrestre con los cuales las medidas de la posición son tomadas. 
+2. Un modelo asociado de la forma de la tierra (*elipsoide de referencia*). 
+
+Para entender por qué se necesita debemos conocer previamente otros dos conceptos:
+
+**Geoide**: se define como la *superficie teórica de la Tierra* que une todos los puntos que tienen igual gravedad. Esta superficie no es uniforme, sino que presenta una serie de irregularidades causadas por la distinta composición mineral del interior de la Tierra y de sus distintas densidades, lo que implica que para cada punto de la superficie terrestre exista una distancia distinta desde el centro de la Tierra al punto del geoide.
+
+**Elipsoide**: se define como la figura geométrica que *representa gráficamente a la Tierra*. Como sabemos, su figura se asemeja a una esfera achatada por los polos, y ésta surge de girar una elipse sobre su eje.
+
+En base a estos valores podemos dar la siguiente definición:
+
+**Datum**: se define como el *punto tangente al elipsoide y al geoide*, donde ambos son coincidentes (*Donde se intersecan el geoide y elipsoide*). 
+
 ## Esfera y esferoide
 El trazado y tamaño de un SCG esta en función de representar la tierra como una esfera o esferoide.
 
