@@ -80,14 +80,25 @@ Se junta con el formato **shape** que representa la información alfanumérica
 ## ¿Qué es SIG?
 Un “Sistema de Información Geográfica (SIG)” es un sistema de computador capaz de capturar, guardar, analizar y desplegar información **geográficamente referenciada**
 
+El SIG integra los datos espaciales como *puntos*, *líneas*,
+*polígonos*, complejas características (**features**) y capas
+(**layers**) de imágenes.
+
 ## SIG Ingredientes
 
-### Datos
+Datos
 
-### SIG
+Son todos los **datos** de las áreas, líneas, puntos, rasgos, etc. 
+
+SIG
+
+Es el **almacenamiento** que esta confromado por:
 + Ingeniería de base de datos espaciales: Trabaja con la parte alfanumérica y geográfica. 
 
-### Información
+Información
+
+Es el **producto**:
++ Mapas, lineas nuevas
 + Presentación en línea
 + Mejoramiento de capacidades de procesamiento, memorias, GPUs, etc
 
@@ -97,8 +108,13 @@ Un “Sistema de Información Geográfica (SIG)” es un sistema de computador c
 + **AM/FM**: Mapeo automatico o manejo de instalaciones
   + Captura y manipulación de información
   + Recuperación de información para análisis
-+ **DMA**
+  + Definición de proyectos SIG
+  + Administración espacial de los datos
+  + Observación geográfica de los datos
++ **DMA**: DEfense Map Agency
 + **Geomática**: 
+  + Geodesia
+  + Fotogrametria y sensores Remotos
   + Cartografía Digital
   + SIG: sistema de reunir datos. 
 
@@ -106,12 +122,19 @@ Un “Sistema de Información Geográfica (SIG)” es un sistema de computador c
 Ahora le dieron mas enfoque a la inteligencia de información con el uso de AI.
 
 ## Componentes 
-+ Equipos
-+ Programas
-+ Datos
-+ Recursos
++ Equipos (Hardware): equipos donde trabaja el SIG, en linea o desconectados.
++ Programas (Software): programas que proveen funcionalidades y las herramientas para
+  + Almacenar
+  + Consultar
+  + Presentar
+  + Analizar
+  + Crear
+  + Modificar
++ Datos: Información geografíca 
++ Recursos Humanos: 
++ Procedimientos: Un SIG operará acorde con un plan bien diseñado y con unas reglas
+claras del negocio
 
-### Equipos
 
 ## Datos
 Los datos geoespaciales tienen tres componentes principales
@@ -123,6 +146,54 @@ Los atributos, que son a menudo denominados “datos temáticos”
 o “datos no espaciales”, están vinculados con datos espaciales o
 datos geométricos.
 
+# ¿Cómo trabaja un SIG?
+Un SIG almacena información acerca del mundo como una colección de
+capas temáticas (layers)que son enlazadas geograficamente. 
+
+## SIG formato de Datos
+
+Modelos
++ Datos **Vector**
+  + Cero dimensión 
+    + Puntos 
+	+ Multipuntos
+  + Una dimensión
+    + Líneas 
+	+ Poligono-líneas
+	+ Ranuras
+  + Dos dimensiones
+    + Poligonos 
+
++ Datos **Raster**
+  + Indicador de grilla
+  + Categoría de grilla
+
+## Comparación de formatos Raster y Vector
+
+**Ventajas Raster**
++ Estructura simple de datos.
++ Compatible con información escaneada o proveniente de sensores remotos.
++ Procedimientos de análisis espacial simple
+
+**Desventaja Raster**
++ Requiere gran capacidad de almacenamiento.
++ Depende del tamaño del píxel.
++ La información gráfica de salida no es tan bonita.
++ Las transformaciones entre sistemas de proyección son más complejas.
++ Mayor dificultad en la representación de las relaciones topológicas.
+
+**Ventajas Vector**
++ Requiere menos espacio para almacenamiento.
++ Fácil mantenimiento de las relaciones topológicas.
++ La información gráfica de salida es más similar a los mapas hechos a mano.
+
+**Desventaja Vector**
++ Mayor complejidad en la estructura de datos.
++ No es tan compatible con la información proveniente de sensores remotos.
++ El software y el hardware son usualmente más costosos.
++ Algunos análisis espaciales pueden ser más difíciles.
++ Superponer múltiples mapas vector puede consumir mucho tiempo.
+
 ## Formato Raster
 
 ### **TIN**
@@ -130,6 +201,13 @@ La comunidad SIG ha utilizado las redes irregulares de triángulos (TIN) y son u
 
 ## Información no-espacial 
 Conocida como atributos o información alfanumérica. 
+
+## Información no-espacial o atributos
+Tanto la información *vectorial* como la *raster* componen la información espacial
+pero un SIG esta compuesto además por información no espacial. 
+
+La manera usual de enlazar la información espacial a la no espacial es mediante identificadores
+únicos o unique Ids, es decir una tabla con nombres de los calles, puntos, etc.
 
 # Sistemas de Coordenadas Geográficas - SGC
 
